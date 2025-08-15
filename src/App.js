@@ -226,7 +226,7 @@ const BulletPointEnhancer = () => {
 
         const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
         const payload = { contents: chatHistory };
-        const apiKey = ""; // Canvas will provide the key
+        const apiKey = process.env.REACT_APP_JobReadyAI_APP; // Canvas will provide the key
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
         try {
@@ -383,7 +383,7 @@ const InterviewQuestionPredictor = ({ cvText, jobDesc }) => {
             contents: chatHistory,
             generationConfig: { responseMimeType: "application/json" }
         };
-        const apiKey = "AIzaSyBWaXEhqeMMXLaDIcl0-ZNQL_bnuAHsDxk"; // Canvas will provide the key
+        const apiKey =  process.env.REACT_APP_JobReadyAI_APP;
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
         try {
