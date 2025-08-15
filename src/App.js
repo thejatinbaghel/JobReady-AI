@@ -52,6 +52,10 @@ const LightbulbIcon = () => (
 // --- Main App Component ---
 
 function App() {
+    React.useEffect(() => {
+        document.title = "JobReady AI";
+    }, []);
+
     const [cvText, setCvText] = useState('');
     const [jobDesc, setJobDesc] = useState('');
     const [fileName, setFileName] = useState('');
